@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Alarm Clock</title>
+</head>
+<body onload="updateClock()">
+    <div id="clock" class="clockstyle" 
+    onmouseover="document.body.style.backgroundColor='grey'"
+    onmouseout="document.body.style.backgroundColor='white'"
+>
+    
+      Click Here For Time
+         
+    </div>
+</body>
+<script src="clock.js"></script>
+</html>
+    <script>
+      console.log("This is clock.js");
+
+
+
+     document.onclick = function updateClock() {
+        let currentTime = new Date();
+
+        let currentHour = currentTime.getHours();
+        let currentMinutes = currentTime.getMinutes();
+        let currentSeconds = currentTime.getSeconds();
+
+        currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+        currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
+
+        currentHour = currentHour > 12 ? currentHour - 12 : currentHour;
+        currentHour = currentHour == 0 ? 12 : currentHour;
+
+        let timeOfDay = currentHour < 12 ? "PM" : "AM";
+        let currentTimeStr =
+          currentHour +
+          ":" +
+          currentMinutes +
+          ":" +
+          currentSeconds +
+          " " +
+          timeOfDay;
+
+        document.getElementById("clock").innerHTML = currentTimeStr;
+      }
+    </script>
+  </body>
+</html>

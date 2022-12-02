@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0px;
+    min-height: fit-content;
+    max-width: 100%;
+}
+
+.clockstyle{
+    margin: 30% 40%;
+    cursor: pointer;
+    width: 250px;
+    padding: 30px;
+    text-align: center;
+    border: 3px solid rgba(255, 255, 255, 0.433);
+    border-radius: 10px;
+    background-color: rgb(171, 106, 106);
+    color: azure;
+    font-family:cursive;
+    font-size: x-large;
+}
+
+.clockstyle:hover{
+    color: rgb(157, 193, 194);
+}
